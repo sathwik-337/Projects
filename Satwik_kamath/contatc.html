@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styel1.css">
+    <title>Contatc information form</title>
+   
+
+<!-- sk1 -->
+    <link rel="stylesheet" 
+    href="/assets/css/capta.css">
+    <link rel="stylesheet" href=
+"https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity=
+"sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+        crossorigin="anonymous">
+
+        <script src="/assets/js/capta.js"></script>
+       <!-- sk2  -->
+
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            
+            <form action="https://api.web3forms.com/submit" method="POST">  
+                <div class="screen-body">
+                    <div class="screen-body-item left">
+                      <div class="app-title">
+                 <span>CONTACT</span>
+                        <span>ME</span>
+                      </div>
+                      <div class="app-contact">CONTACT INFO : +91 7975380336</div>
+                    </div>
+                    <div class="screen-body-item">
+                      <div class="app-form">
+                        <input type="hidden" name="access_key" value="eddb1f1f-355d-4928-84b8-121011b1ce17">
+                        <div class="app-form-group">
+                          <input class="app-form-control" type="text" name="name" required  placeholder="NAME">
+                        </div>
+                        <div class="app-form-group">
+                          <input class="app-form-control" type="email" name="email" required placeholder="EMAIL">
+                        </div>
+                        <div class="app-form-group">
+                          <input class="app-form-control" name="Number" required placeholder="CONTACT NO">
+                        </div>
+                        <div class="app-form-group message">
+                          <input class="app-form-control" name="message" required placeholder="MESSAGE">
+                        </div>
+
+                        <div class="app-form-group message">
+                          
+                          <!-- sk3 -->
+                          <body onload="generate()">
+                            <div id="user-input" class="app-form-control">
+                                <input type="text" 
+                                       id="submit" 
+                                       placeholder="Captcha code">
+                            </div>
+                        
+                            <div class="inline" onclick="generate()">
+                                <i class="fas fa-sync"></i>
+                            </div>
+                        
+                            <div id="image" 
+                                 class="inline" 
+                                 selectable="False">
+                            </div>
+                            
+                            <p id="key"></p>
+
+                            <!-- sk4 -->
+
+                        </div>
+
+                        <div class="app-form-group buttons">
+                           
+
+                          <button class="app-form-button"><a class="app-form-button" href="index.html">HOME</a></button>
+                          
+                          <!-- sk5 -->
+                          <button id="btn" class="app-form-button" type="submit" value="submit" onclick="printmsg()">SEND</button>
+                          <!-- sk6 -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+            </form>
+
+            
+          </div>
+          <div class="credits">
+            inspired by
+            <a class="credits-link" href="https://dribbble.com/shots/2666271-Contact" target="_blank">
+              <svg class="dribbble" viewBox="0 0 200 200">
+                <g stroke="#ffffff" fill="none">
+                  <circle cx="100" cy="100" r="90" stroke-width="20"></circle>
+                  <path d="M62.737004,13.7923523 C105.08055,51.0454853 135.018754,126.906957 141.768278,182.963345" stroke-width="20"></path>
+                  <path d="M10.3787186,87.7261455 C41.7092324,90.9577894 125.850356,86.5317271 163.474536,38.7920951" stroke-width="20"></path>
+                  <path d="M41.3611549,163.928627 C62.9207607,117.659048 137.020642,86.7137169 189.041451,107.858103" stroke-width="20"></path>
+                </g>
+              </svg>
+              Sathwik kamath
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    
+</body>
+</html>
