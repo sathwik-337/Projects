@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+ .lists{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    background-color:transparent;
+    justify-content: flex-end; 
+    
+    
+}
+
+.lists a{
+    text-decoration: none;
+    color:white;
+    padding: 0 40px;
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat";
+  
+}
+body{
+    background:rgba(0, 0, 0, 0.909) url(/img/background.jpg);
+    background-blend-mode:darken ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow-x:hidden;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: auto;  
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%; 
+    height: 50px;
+       
+}
+.menu{
+    display: none;
+    justify-content: center;
+    align-items: center ;
+    font-family: "Montserrat";
+}
+ .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display:none;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color:#0a010106;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    list-style: none;
+    align-items: center;
+    font-family: "Montserrat";
+  
+} 
+.sidebar a{
+    padding: 30px;
+    font-family: "Montserrat";
+    
+}
+
+   @media(max-width:800px){
+    .hideonmob{
+        display:none;
+    }
+}  
+   @media(max-width:800px){
+    .menu{
+        display:flex;
+    } 
+}   
+/* Hover Effect */
+.lists a::after {
+    /* content: ""; */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    /* transform: scaleX(0); */
+    transition: transform 0.3s ease-in-out;
+}
+
+.lists a:hover {
+    color: red;
+}
+
+.lists a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Sidebar Hover Effect */
+.sidebar a {
+    padding: 30px;
+    font-family: "Montserrat";
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidebar a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+    color: red;
+}
+
+.sidebar a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}  
+.highlights{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   
+}
+.home{
+    display: flex;
+    justify-content: center;
+}
+.home h1{
+    color: white;
+    font-family: "Montserrat";
+    font-size: 5vmin;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30,end),
+      blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  } 
+.homeimg{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-container { 
+    position: relative; 
+    max-width: 800px; margin:
+    auto; overflow: hidden;
+    border-radius: 5%;  
+    }
+.slides { 
+    display: flex; 
+    transition: transform 0.5s ease-in-out;
+    border-radius: 5%; 
+ }
+.slides img {
+     width: 100%;
+      height: 50%; 
+      border-radius: 5%s;  
+    }
+.para{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family:"Montserrat";
+    font-size: 25px;
+    padding: 20px;
+    max-height: fit-content;
+    
+}
+.mid img{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 15px;
+}
+    .mid {
+        filter: grayscale(100%); /* Make image black and white */
+        transition: filter 0.1s ease-in-out; /* Smooth transition */
+    }
+    
+    .mid:hover {
+        filter: grayscale(0%); /* Restore original color on hover */
+    }
+
+.features {
+    display: flex;
+    justify-content: space-around; /* Spaces items evenly */
+    flex-wrap: wrap; /* Wraps to next line if screen is small */
+    gap: 20px; /* Adds spacing between items */
+}
+.feature-item {
+    background: #f4f4f4; /* Light background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1; /* Equal width for all */
+    min-width: 200px; /* Prevents shrinking too much */
+    font-family:"Montserrat" ;
+    font-size: 20px;
+    color: white;
+    background: rgba(18, 18, 18, 0);
+    background: radial-gradient(circle, rgb(26, 24, 23) 0%, rgb(35, 33, 33) 100%);
+}
+.feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.918);
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Image on left, text on right */
+    align-items: center; /* Aligns items in the center */
+    max-width: 1100px;
+    margin-top: 50px;
+}
+.image {
+    flex: 1;
+    padding-right: 40px; /* Adds spacing between image and text */
+}
+.image img {
+    width: 400px; /* Increased width */
+    height: 500px; /* Increased height */
+    border-radius: 10px;
+    display: block;
+}
+.content {
+    flex: 1.5; /* Increases text width proportionally */
+    text-align: left; /* Ensures text stays aligned to the left */
+}
+.pa {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 500px; /* Limits width for better readability */
+}
+
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.plan {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(28, 27, 27, 0.936);
+    transition: transform 0.3s ease;
+    font-family: "Montserrat";
+    color: #f4f4f4;
+    
+}
+.plan:hover {
+    transform: scale(1.05);
+}
+.plan h2 {
+    color: #e41d1d;
+}
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.facilities {
+    text-align: left;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+.facilities li {
+    margin: 5px 0;
+}
+.btn {
+    display: inline-block;
+    background-color:  #e41d1d;
+    color: black;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: #d48810;
+}
+
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+.map {
+    flex: 1;
+}
+.map iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+.contact-form {
+    flex: 1;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+.contact-form h2 {
+    text-align: center;
+    color: #f71212;
+    font-size: 25px;
+    font-family: "Montserrat";
+
+}
+.form-group {
+    margin: 15px 0;
+}
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-family: "Montserrat";
+    color: #e41d1d;
+    font-weight: bold;
+}
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    font-family: "Montserrat";
+    background-color: #222;
+    color: white;
+
+}
+.bton {
+    background-color: rgb(15, 1, 1);
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-family: "Montserrat";
+}
+.bton:hover {
+    background-color: #ff0f0f;
+}
+
+
+.sidebar {
+    display: flex;
+    width: 60%;
+}
+
+
+/* Responsive Typography */
+@media screen and (max-width: 768px) {
+.home h1 {
+    font-size: 4vmin;
+    text-align: center;
+}
+.para {
+    font-size: 18px;
+    padding: 10px;
+}
+}
+
+/* Responsive Membership Plans */
+@media screen and (max-width: 768px) {
+.plans-container {
+    flex-direction: column;
+    align-items: center;
+}
+.plan {
+    width: 90%;
+}
+}
+
+/* Responsive Trainer Features */
+@media screen and (max-width: 768px) {
+.features {
+    flex-direction: column;
+    align-items: center;
+}
+.feature-item {
+    width: 90%;
+    text-align: center;
+}
+}
+
+/* Responsive Contact Section */
+@media screen and (max-width: 768px) {
+.contact-container {
+    flex-direction: column;
+}
+.map iframe {
+    height: 300px;
+}
+}
+
+/* Responsive Image Slider */
+@media screen and (max-width: 768px) {
+.slider-container {
+    max-width: 100%;
+}
+.slides img {
+    width: 100%;
+    height: auto;
+}
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+footer {
+    text-align: center;
+    padding: 10px;
+}
+}
+.about h1 {
+    text-align: center;
+    font-size: 3.5vmin;  /* Scales text based on screen size */
+}
+
+/* Centering Image & Making it Responsive */
+.mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    .about h1 {
+        font-size: 5vmin; /* Adjusts font size for mobile */
+    }
+
+    .mid img {
+        height: auto;
+        max-width: 90%; /* Prevents overflow */
+    }
+}
+ @media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+} 
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        display: none;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+h2 {
+    font-size: 2.5rem;
+    color:white;
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service-box {
+    background: black;
+    color:white;
+    font-family: "Montserrat";
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s, border 0.3s;
+    border: 2px solid transparent;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    border: 2px solid red;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
+.footer {
+    background-color: black;
+    padding: 40px 20px;
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Montserrat";
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    color: red;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: red;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid red;
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
